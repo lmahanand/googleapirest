@@ -65,9 +65,9 @@ public class LocationCoordinates {
         }
 
         if (results != null) {
-            List<JsonNode> geometry = results.findValues("geometry");
+            List<JsonNode> geometry = results.findValues(Const.GEOMETRY);
 
-            location = geometry.get(0).findValue("location");
+            location = geometry.get(0).findValue(Const.LOCATION);
         }
         return location;
 
